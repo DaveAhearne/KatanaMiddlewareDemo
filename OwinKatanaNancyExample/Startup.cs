@@ -17,7 +17,7 @@ namespace KatanaOwinSimple
                 //await responseStream.WriteAsync(Encoding.UTF8.GetBytes(outputString), 0, outputString.Length);
 
                 // If you want HTML output, you have to write it yourself for the moment:
-                await ctx.Response.WriteAsync("<html><head></head><body><h1>Hello World</h1></body></html>");
+                await ctx.Response.WriteAsync("<html><head></head><body><h1>Simple Example</h1></body></html>");
             });
         }
     }

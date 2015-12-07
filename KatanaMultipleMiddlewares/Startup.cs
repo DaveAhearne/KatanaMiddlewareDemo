@@ -31,7 +31,7 @@ namespace KatanaMultipleMiddlewares
 
             app.Use(async (ctx, next) =>
             {
-                await ctx.Response.WriteAsync("World");
+                await ctx.Response.WriteAsync("Now we're in pipelines!");
             });
         }
     }
