@@ -11,6 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMiddlewareOptions", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMiddlewareUseMethod", "KatanaMiddlewareUseMethod\KatanaMiddlewareUseMethod.csproj", "{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeginningNancyFx", "BeginningNancyFx\BeginningNancyFx.csproj", "{D33866B5-7E00-4B94-BFC2-4D99F3196230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaSelfHosting", "KatanaSelfHosting\KatanaSelfHosting.csproj", "{D7B35820-C64A-44AF-9082-6D664253FC7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaSelfHosting.Tests", "KatanaSelfHosting.Tests\KatanaSelfHosting.Tests.csproj", "{B0FEB5E0-51AF-48D3-A389-6077E415813F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreNancyFxSelfHost", "MoreNancyFxSelfHost\MoreNancyFxSelfHost.csproj", "{E061EBF6-09BD-4761-9351-48013C9CA819}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreNancyFxAspHost", "MoreNancyFxAspHost\MoreNancyFxAspHost.csproj", "{FA8B825B-AC0D-402B-9747-91626113AF65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +47,26 @@ Global
 		{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33866B5-7E00-4B94-BFC2-4D99F3196230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33866B5-7E00-4B94-BFC2-4D99F3196230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33866B5-7E00-4B94-BFC2-4D99F3196230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33866B5-7E00-4B94-BFC2-4D99F3196230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B35820-C64A-44AF-9082-6D664253FC7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B35820-C64A-44AF-9082-6D664253FC7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B35820-C64A-44AF-9082-6D664253FC7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B35820-C64A-44AF-9082-6D664253FC7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FEB5E0-51AF-48D3-A389-6077E415813F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FEB5E0-51AF-48D3-A389-6077E415813F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FEB5E0-51AF-48D3-A389-6077E415813F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FEB5E0-51AF-48D3-A389-6077E415813F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E061EBF6-09BD-4761-9351-48013C9CA819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E061EBF6-09BD-4761-9351-48013C9CA819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E061EBF6-09BD-4761-9351-48013C9CA819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E061EBF6-09BD-4761-9351-48013C9CA819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8B825B-AC0D-402B-9747-91626113AF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8B825B-AC0D-402B-9747-91626113AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8B825B-AC0D-402B-9747-91626113AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8B825B-AC0D-402B-9747-91626113AF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
