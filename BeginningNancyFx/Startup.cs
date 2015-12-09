@@ -28,13 +28,14 @@ namespace BeginningNancyFx
             /*
              * Problem: - Why do we get a 404 now? Why doesnt our pipeline continue past Nancy if the request doesnt match?
              * Answer: - Nancy is short circuiting and returning a response for us.
-             *  
              */
 
+            
             // One solution is to use the Map method, this sets a middleware for a specific path
             // In this case we map /nancy to an IAppBuilder and then tell that specific path only to use Nancy
-            app.Map("/nancy", mappedApplication => mappedApplication.UseNancy());
+            //app.Map("/nancy", mappedApplication => mappedApplication.UseNancy());
 
+            
             /*
              * There is a problem with this though, if you attempt to go to that path now, it will 404, and you will need to go to /nancy/nancy to see
              * on top of that, the enviroment path we are writing out will only display /nancy? (need to display the request path base aswell to show the full url)

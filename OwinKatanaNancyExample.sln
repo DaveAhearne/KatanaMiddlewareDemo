@@ -1,25 +1,32 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaOwinSimple", "OwinKatanaNancyExample\KatanaOwinSimple.csproj", "{0DA2D15D-34E7-40B0-AAAA-5622E7085090}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. KatanaOwinSimple", "OwinKatanaNancyExample\1. KatanaOwinSimple.csproj", "{0DA2D15D-34E7-40B0-AAAA-5622E7085090}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMultipleMiddlewares", "KatanaMultipleMiddlewares\KatanaMultipleMiddlewares.csproj", "{C00252FF-6C03-4757-B739-9234BEC14FAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. KatanaMultipleMiddlewares", "KatanaMultipleMiddlewares\2. KatanaMultipleMiddlewares.csproj", "{C00252FF-6C03-4757-B739-9234BEC14FAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMiddlewareClasses", "KatanaMiddlewareClasses\KatanaMiddlewareClasses.csproj", "{33131F93-A647-4D4D-9EBF-8AD465F06CA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. KatanaMiddlewareClasses", "KatanaMiddlewareClasses\3. KatanaMiddlewareClasses.csproj", "{33131F93-A647-4D4D-9EBF-8AD465F06CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMiddlewareOptions", "KatanaMiddlewareOptions\KatanaMiddlewareOptions.csproj", "{F0E01552-B2B5-4059-8ED4-6AEA1B210F0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4. KatanaMiddlewareOptions", "KatanaMiddlewareOptions\4. KatanaMiddlewareOptions.csproj", "{F0E01552-B2B5-4059-8ED4-6AEA1B210F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaMiddlewareUseMethod", "KatanaMiddlewareUseMethod\KatanaMiddlewareUseMethod.csproj", "{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5. KatanaMiddlewareUseMethod", "KatanaMiddlewareUseMethod\5. KatanaMiddlewareUseMethod.csproj", "{CBD4473D-3DD0-4E41-BF5D-8083D857E0DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeginningNancyFx", "BeginningNancyFx\BeginningNancyFx.csproj", "{D33866B5-7E00-4B94-BFC2-4D99F3196230}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. BeginningNancyFx", "BeginningNancyFx\8. BeginningNancyFx.csproj", "{D33866B5-7E00-4B94-BFC2-4D99F3196230}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaSelfHosting", "KatanaSelfHosting\KatanaSelfHosting.csproj", "{D7B35820-C64A-44AF-9082-6D664253FC7C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6. KatanaSelfHosting", "KatanaSelfHosting\6. KatanaSelfHosting.csproj", "{D7B35820-C64A-44AF-9082-6D664253FC7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KatanaSelfHosting.Tests", "KatanaSelfHosting.Tests\KatanaSelfHosting.Tests.csproj", "{B0FEB5E0-51AF-48D3-A389-6077E415813F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. KatanaSelfHosting.Tests", "KatanaSelfHosting.Tests\7. KatanaSelfHosting.Tests.csproj", "{B0FEB5E0-51AF-48D3-A389-6077E415813F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreNancyFxSelfHost", "MoreNancyFxSelfHost\MoreNancyFxSelfHost.csproj", "{E061EBF6-09BD-4761-9351-48013C9CA819}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. MoreNancyFxSelfHost", "MoreNancyFxSelfHost\10. MoreNancyFxSelfHost.csproj", "{E061EBF6-09BD-4761-9351-48013C9CA819}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreNancyFxAspHost", "MoreNancyFxAspHost\MoreNancyFxAspHost.csproj", "{FA8B825B-AC0D-402B-9747-91626113AF65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9. MoreNancyFxAspHost", "MoreNancyFxAspHost\9. MoreNancyFxAspHost.csproj", "{FA8B825B-AC0D-402B-9747-91626113AF65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2A300AB-055F-4EEB-8326-047C341B50CD}"
+	ProjectSection(SolutionItems) = preProject
+		OwinNotes.txt = OwinNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. NancyOwinRoutingDemo", "NancyOwinRoutingDemo\11. NancyOwinRoutingDemo.csproj", "{FD3EA3F5-9BCE-485D-BF95-751358FF14B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +74,10 @@ Global
 		{FA8B825B-AC0D-402B-9747-91626113AF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA8B825B-AC0D-402B-9747-91626113AF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA8B825B-AC0D-402B-9747-91626113AF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3EA3F5-9BCE-485D-BF95-751358FF14B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3EA3F5-9BCE-485D-BF95-751358FF14B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3EA3F5-9BCE-485D-BF95-751358FF14B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3EA3F5-9BCE-485D-BF95-751358FF14B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -67,9 +67,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KatanaSelfHosting\KatanaSelfHosting.csproj">
+    <ProjectReference Include="..\KatanaSelfHosting\6. KatanaSelfHosting.csproj">
       <Project>{d7b35820-c64a-44af-9082-6d664253fc7c}</Project>
-      <Name>KatanaSelfHosting</Name>
+      <Name>6. KatanaSelfHosting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,127 @@
+OWIN: Open Web Interface for .Net (Its just a specification that defines how you can abstract out the web server, this lets us build applications that don't care about how they get hosted e.g locked into IIS)
+
+“OWIN defines a standard interface between .NET web servers and web applications” www.owin.org
+
+Currently, .Net web application have a set dependency on IIS, unless you use webapi or nancyfx
+
+OWIN lets us build server agnostic applications, but still a standardized way as opposed to the custom workarounds that webapi and nancyfx use – ITS JUST A SPECIFICATION THOUGH
+
+
+The questions are the following:
+How do you abstract away any web server in the world?
+Current & Future
+Without limiting them?
+How do you make it simple?
+
+They've made it simple by using a .Net delegate, and a dictionary:
+using AppFunc = Func<IDictionary<string, object>, Task>;
+
+var f = new AppFunc(environment => {
+	return Task.FromResult(null);
+});
+
+You don’t have to declare it with a using statement, it just makes things look nice.
+
+The dictionary we've defined, passes all of the information that is included as part of the HTTP request into the delegate we've defined. So each HTTP request is given to us a nice dictionary of elements.
+
+It also contains any extra functionality that the server would like to offer the web-application, we can have functionality because the dictionary is string – object, the server can expose functionality by inserting delegates into the dictionary.
+
+The delegate is commonly referred to as the appfunc.
+The dictionary is generally referred to as the environment.
+
+The return task is used to tell the server when the application is done processing the request.
+
+
+
+
+Owin defines parts (Actors) that are involved in handling requests:
+Host
+Server
+Middleware
+Application
+
+Going over these from outside in:
+
+Host: - YourProcess.exe
+A process of some sort that hosts all the other parts, this can be literally anything from a console app, to a windows service to iis. Starts up everything
+
+Server: - Sits inside the process
+Responsible for accepting incoming http requests and returning responses, in some cases e.g. iis the host and the process are the same thing
+
+Middleware Pipeline: - Manipulates request/responses
+As the server passes the request to the application via appFunc, it passes it through a pipeline of middlewares. A middleware is just some code that the request is passed through on the way to and from the application code (Similar to IIS HTTP modules, but not event driven and not IIS dependant).
+
+Application: - Generates response
+Technically, there is no difference between middleware and application, as the middleware can shortcircuit and return a response e.g an auth middleware, the difference here being that our application was built with the purpose of returning a response.
+
+Because using the “Pipeline” is a really low level way to handle requests and responses, most of the time we abstract it away with a framework. Owin web frameworks are just a set of middlewares that plug directly in and expose an API for the dev to use.
+
+
+1. Client connects to server & sends http request e.g. web page request
+2. Server parses request, converts it into pre-defined pieces
+3. Puts those pieces into a dictionary of type string-object along with an empty response stream, and dictionary of response headers. Pre defined keys are used so other parts of the system are aware.
+4. The built request enviornment is passed to the first middleware in the pipeline (Via AppFunc), the return task is used to signal that its done processing
+5. Middleware inspects dictionary and makes modifications, or executes other code and then passes the dictionary to the next middleware in the pipeline
+6. After X middlewares, the application finally recieves the environment dictionary
+7. The application generates a response, and sets response headers and writes the response to the response stream
+8. On the first write to the response stream, the server is notified & crafts a http response method, including the response headers that are in the collection at the time. (No response headers collection modifications are allowed after this point,  only adding things to the response body, as the connection is still open)
+9. Response is then passed back to the last middleware in the pipeline, allowing it to make further modifications
+10. This continues for X middlewares until the response is at the beginning of the pipeline
+11. Server is notified of the completion of processing by the AppFunc Task
+12. Server finalizes the client response and then closes the connection
+
+Remember: There is nothing to stop a middle-ware short-circuiting and returning a response prematurely.
+
+
+The Owin spec defines a bunch of keys that should be available to the server when passed from the owin pipeline, they're all prefixed with “owin.” So that you don't accidetnally overwrite something, some examples are:
+owin.RequestPath
+owin.RequestQueryString
+owin.ResponseHeaders
+owin.ResponseBody
+owin.Version
+
+The last ones important, as it contains the Owin version that the server supports meaning features can be added later but dependant on the owin version.
+
+It also includes an “server.OnSendingHeaders” that allows you to register a callback when the response headers are about to be sent back to the client, so that we can modify the response headers JUST before they're sent back to the client.
+
+
+Nancy is basically Ruby for .Net - Super dupy happy path:
+- Just works
+- Customizable
+- Low Ceremony
+- Low friction
+
+"Modules" in nancy define routes
+Modules are Http methods, a pattern and a condition
+e.g Get, and our path (Didnt use a condition here yet)
+
+How know what route to choose? It looks at the request:
+Request Line -> Mapped to Request object properties (Method, Path, Query?, Url (Path + Query))
+Headers -> Cookies, Headers, Session
+Body -> Mapped to body property, if it indicates it has any files this is mapped to files, if form values are sent, it will deserialze to the form property
+
+
+The route is a method e.g Get/Post/Put/Delete/Head/Options/Patch
++ a pattern e.g "/orders", "/users/256"
+
+
+In the event of an exact match we choose that route
+
+ROUTE SELECTION:
+- Modules are loaded in different orders at startup
+- Routes are discovered in the order they're defined
+- Exact matches are always highest scoring
+- In the event that a single literal is not found, the more specific is chosen 
+e.g The highest number of literal matches & least number of captured matches
+
+For example:
+/Customers/{customerid}/orders <- Would win
+/Customers/{customerid}/orders/{orderid}
+
+If Two routes are found, the first is used.
+
+
+
+
+
+

@@ -1,9 +1,9 @@
-﻿// This using isn't essential, but its easier than rewriting it all:
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.Owin;
+
+// This using isn't essential, but its easier than rewriting it all:
 using AppFunc = System.Func<System.Collections.Generic.IDictionary<string, object>, System.Threading.Tasks.Task>;
 
 namespace KatanaMiddlewareClasses.Middleware

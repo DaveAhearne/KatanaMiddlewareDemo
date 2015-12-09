@@ -6,6 +6,14 @@ namespace KatanaOwinSimple
     {
         public static void Configuration(IAppBuilder app)
         {
+            /*
+             * Why OWIN? It allows you to abstract the server away so we're not bothered about how our application is hosted
+             * 
+             * How do you abstract any server, current and future, without limiting them whilst keeping it simple?
+             * Its a simple delegate, a Func<IDictionary<string,object>, Task>;
+             * 
+             */
+
             app.Use(async (ctx, next) =>
             {
                 // Katana API implementation
